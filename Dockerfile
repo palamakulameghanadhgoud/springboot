@@ -1,5 +1,6 @@
 # Build stage - build context = repo root, app is in store/
 FROM eclipse-temurin:21-jdk-alpine AS builder
+RUN apk add --no-cache bash
 WORKDIR /build
 
 COPY store/mvnw .
