@@ -17,7 +17,9 @@ services:
         fromDatabase:
           name: store-db
           property: connectionString
+
       - key: SPRING_JPA_HIBERNATE_DDL_AUTO
-        value: update
+        value: "update"
+
       - key: SPRING_JPA_SHOW_SQL
         value: "false"
