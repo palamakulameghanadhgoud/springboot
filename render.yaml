@@ -1,6 +1,3 @@
-# Render Blueprint - Store Application
-# Docs: https://render.com/docs/blueprint-spec
-
 databases:
   - name: store-db
     databaseName: store_db
@@ -17,9 +14,7 @@ services:
         fromDatabase:
           name: store-db
           property: connectionString
-
       - key: SPRING_JPA_HIBERNATE_DDL_AUTO
-        value: "update"
-
+        value: update
       - key: SPRING_JPA_SHOW_SQL
         value: "false"
