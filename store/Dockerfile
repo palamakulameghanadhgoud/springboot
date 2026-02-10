@@ -10,7 +10,6 @@ COPY frontend frontend
 
 RUN chmod +x mvnw
 
-# Build (dependencies cached in separate layer)
 RUN ./mvnw dependency:go-offline -B
 RUN ./mvnw clean package -DskipTests -B
 
