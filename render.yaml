@@ -1,6 +1,11 @@
 # Render Blueprint - Store Application
 # Docs: https://render.com/docs/blueprint-spec
 
+databases:
+  - name: store-db
+    databaseName: store_db
+    plan: free
+
 services:
   - type: web
     name: store
@@ -16,8 +21,3 @@ services:
         value: update
       - key: SPRING_JPA_SHOW_SQL
         value: "false"
-
-databases:
-  - name: store-db
-    databaseName: store_db
-    plan: free
