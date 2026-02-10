@@ -5,15 +5,12 @@ services:
   - type: web
     name: store
     runtime: docker
-    dockerfilePath: ./Dockerfile
-    dockerContext: .
-
-    # PostgreSQL database (Render provisioned)
+    dockerfilePath: ./store/Dockerfile
+    dockerContext: ./store
     envVars:
       - key: DATABASE_URL
         fromDatabase:
           name: store-db
-          property: connectionString
       - key: SPRING_JPA_HIBERNATE_DDL_AUTO
         value: update
       - key: SPRING_JPA_SHOW_SQL
